@@ -38,6 +38,8 @@ app.use(cors(corsOptions));
 app.use('/api/veterinarios', veterinarioRoutes);
 app.use('/api/pacientes', pacienteRoutes);
 
-app.listen(process.env.PORT, () => {
-    console.log(`Servidor Corriendo en el puerto ${process.env.PORT} `);
+const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, () => {
+    console.log(`Servidor Corriendo en el puerto ${PORT} `);
 });
